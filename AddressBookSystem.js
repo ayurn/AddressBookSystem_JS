@@ -65,8 +65,8 @@ class Contact {
 function addContact(){
     let firstName = prompt("Enter Firstname: ");
     let lastName = prompt("Enter Lastname: ");
-    if(contactArray.find((contact)=>(contact.firstName+" "+contact.lastName)==(FirstName+" "+LastName))){   
-        console.log("Name is already present in addressbook.");
+    if(contactArray.find((contact)=>(contact.firstName+" "+contact.lastName)==(firstName+" "+lastName))){   
+        console.log("Given contact already present in addressbook.");
         return;
     }
     let address = prompt("Enter Address: ");
@@ -146,7 +146,7 @@ let deletContact=()=>{
 
 let choice = 0;
 do{
-    console.log("Press: \n1) Add Contact \n2) Edit Contact \n3) View Contact \n4) Delete Contact \n5) Count Contacts \n0)Exit:");
+    console.log("Press: \n1) Add Contact \n2) Edit Contact \n3) View Contact  \n4) Delete Contact \n5) Count Contacts \n0)Exit:");
     choice = Number(prompt("Enter your choice: "));
     if(choice == 1){
         addContact();
